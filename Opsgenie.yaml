@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: For testing
+Resources:
+  OpsgenieTeam:
+    Type: Atlassian::Opsgenie::Team
+    Properties:
+      OpsgenieApiKey: "<API_Key>"
+      OpsgenieApiEndpoint: "https://api.opsgenie.com"
+      Name: "Testing-cloudformation-11"
+      Description: "for testing Cloudformation"
+
+  OpsgenieIntegration:
+    Type: Atlassian::Opsgenie::Integration
+    Properties:
+      OpsgenieApiKey: "API_KEY"
+      OpsgenieApiEndpoint: "https://api.opsgenie.com"
+      Enabled: true
+      Name: Datadog-integration-cloudformation-11
+      IntegrationType: Datadog
+      OwnerTeamId: !Ref OpsgenieTeam
