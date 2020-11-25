@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: For testing
+Description: For testing 2
 Resources:
   OpsgenieTeam:
     Type: Atlassian::Opsgenie::Team
